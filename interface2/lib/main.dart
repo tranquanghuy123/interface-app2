@@ -31,22 +31,23 @@ class MyApp2 extends StatelessWidget {
               width: widthScreen,
               height: 70,
               decoration: BoxDecoration(
-                border: Border.all(width: 3, color: Colors.blue),
+                //border: Border.all(width: 3, color: Colors.blue),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(40), topRight: Radius.circular(40))
               ),
-              padding: EdgeInsets.fromLTRB(10, 10, 25, 10),
+              padding: EdgeInsets.fromLTRB(5, 0, 20, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
+
                 children: [
-                  Icon(Icons.chevron_left, color: Colors.blueGrey, size: 50),
+
+                  Icon(Icons.keyboard_arrow_left, color:Color.fromARGB(255, 211, 239, 251), size: 60),
                   Text('Payment',
                     style: TextStyle(
-                        color: Colors.grey[400], fontSize: 21, fontWeight: FontWeight.w900,
+                        color: Color.fromARGB(255, 208, 224, 224), fontSize: 22, fontWeight: FontWeight.w900,
                         fontFamily: 'Visby Round'
                     ),),
-                  Icon(Icons.circle, color: Colors.blueGrey, size: 30
+                  Icon(Icons.circle_rounded, color: Color.fromARGB(255, 211, 239, 251), size: 35
                   )
                 ],
               ),
@@ -56,21 +57,22 @@ class MyApp2 extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           child: Container(
             width: widthScreen,
-            height: 500,
+            height: 560,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(40)),
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment(0.8, 1),
                   colors: <Color>[
-                    Color(0xff1f005c),
-                    Color(0xff5b0060),
-                    Color(0xff870160),
-                    Color(0xffac255e),
-                    Color(0xffca485c),
-                    Color(0xffe16b5c),
-                    Color(0xfff39060),
-                    Color(0xffffb56b),
+                    Color.fromARGB(255, 71, 198, 250),
+                    Color.fromARGB(255, 73, 200, 244),
+                    Color.fromARGB(255, 65, 193, 254),
+                    Color.fromARGB(255, 37, 143, 253),
+                    Color.fromARGB(255, 37, 143, 253),
+                    Color.fromARGB(255, 78, 210, 210),
+                    Color.fromARGB(255, 89, 223, 170),
+                    Color.fromARGB(255, 89, 223, 170),
+                   
                   ],
                 ),
               ),
@@ -79,14 +81,16 @@ class MyApp2 extends StatelessWidget {
 
           // ô 1
           Positioned(
-            left: 100,
+            left: 90,
             top: 75,
             child: Container(
-              width: 210,
+              width: 200,
               height: 125,
               decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: Colors.blue),
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                color: Color.fromARGB(255, 231, 249, 253).withOpacity(0.6),
+                  border: Border.all(width: 1, color: Colors.white38),
+                  borderRadius: BorderRadius.all(Radius.circular(20),
+                 )
               ),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -96,14 +100,16 @@ class MyApp2 extends StatelessWidget {
                 height: 27,
                 margin: EdgeInsets.only(top: 25),
                 decoration: BoxDecoration(
-                    border: Border.all(width: 3, color: Colors.blue),
+                  color: Colors.blue.withOpacity(0.2),
+                    border: Border.all(width: 1, color: Colors.white70),
                 )),
               Container(
-                width: 45,
-                height: 17,
-                margin: EdgeInsets.only(top: 21, right: 20),
+                width: 50,
+                height: 13,
+                margin: EdgeInsets.only(top: 23, right: 20),
                 decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: Colors.blue),
+                  color: Colors.white,
+                  border: Border.all(width: 1, color: Colors.white),
                   borderRadius: BorderRadius.all(Radius.circular(50))
                 )
               )
@@ -117,70 +123,111 @@ class MyApp2 extends StatelessWidget {
           // ô 2
           Positioned(
             left: 30,
-            top: 220,
+            top: 230,
             child: Container(
-              width: 350,
-              height: 185,
+              width: 330,
+              height: 210,
               decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: Colors.blue),
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                color: Color.fromARGB(255, 231, 249, 253).withOpacity(0.4),
+                border: Border.all(width: 1, color: Colors.white38),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                       width: 185,
-                      height: 40,
-                      margin: EdgeInsets.fromLTRB(20,20,20,15),
+                      height: 38,
+                      margin: EdgeInsets.fromLTRB(20,20,20,20),
                       decoration: BoxDecoration(
-                        border: Border.all(width: 3, color: Colors.blue),
-                      )),
+                        //border: Border.all(width: 3, color: Colors.blue),
+                      ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Choose Your Payment',style: TextStyle(
+                          color: Colors.white, fontSize: 15, fontFamily: 'Visby Round',
+                          fontWeight: FontWeight.w700,
+                        ),),
+                        Text('Method',style: TextStyle(
+                            color: Colors.white, fontSize: 15, fontFamily: 'Visby Round'
+                        ,fontWeight: FontWeight.w700),),
+                      ],
+                    ),
+                  ),
                   Container(
-                      width: 306,
-                      height: 87,
+                      width: 292,
+                      height: 120,
                       margin: EdgeInsets.fromLTRB(20,0,10,10),
                       decoration: BoxDecoration(
-                        border: Border.all(width: 3, color: Colors.blue),
+                        //border: Border.all(width: 3, color: Colors.red),
                         borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.circle, color: Colors.white, size: 20),
+                        Icon(Icons.circle, color: Colors.white, size: 25),
                         Container(
-                          width: 270,
-                          height: 80,
+                          width: 245,
+                          height: 115,
                           margin: EdgeInsets.only(left: 10),
                           decoration: BoxDecoration(
+                              color: Colors.white,
                             border: Border.all(width: 3, color: Colors.white),
                             borderRadius: BorderRadius.all(Radius.circular(20))),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                             Container(
-                            width: 270,
-                            height: 23.5,
+                            width: 230,
+                            height: 30,
                             margin: EdgeInsets.only(left: 5,right: 5),
+                            padding: EdgeInsets.only(left: 10),
+                            alignment: Alignment.center,
                             decoration: BoxDecoration(
-                                border: Border.all(width: 3, color: Colors.white),
+                              color: Colors.white,
+                                //border: Border.all(width: 3, color: Colors.black),
                                 borderRadius: BorderRadius.all(Radius.circular(20))),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text('Select', style: TextStyle(
+                                    color: Color.fromARGB(255, 208, 224, 224), fontSize: 12,fontWeight: FontWeight.w600
+                                  ),),
+                                  Icon(Icons.keyboard_arrow_down,
+                                    color: Colors.lightBlueAccent, size: 23,)
+                                ],
+                              ),
                             ),
                           Container(
-                            width: 270,
-                            height: 23.5,
+                            width: 230,
+                            height: 30,
                             margin: EdgeInsets.only(left: 5,right: 5),
+                            alignment: Alignment.centerLeft,
+                            padding: EdgeInsets.only(left: 10),
                             decoration: BoxDecoration(
-                                border: Border.all(width: 3, color: Colors.blue),
+                              color: Colors.lightBlueAccent,
+                                //border: Border.all(width: 3, color: Colors.black),
                                 borderRadius: BorderRadius.all(Radius.circular(20))),
+                            child: Text('VISA', style: TextStyle(
+                                color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600
+                            ),),
                           ),Container(
-                          width: 270,
-                          height: 23.5,
+                          width: 230,
+                          height: 30,
                           margin: EdgeInsets.only(left: 5,right: 5),
+                                  alignment: Alignment.centerLeft,
+                                  padding: EdgeInsets.only(left: 10),
                           decoration: BoxDecoration(
-                              border: Border.all(width: 3, color: Colors.white),
+                              color: Colors.white,
+                              //border: Border.all(width: 3, color: Colors.black),
                               borderRadius: BorderRadius.all(Radius.circular(20))),
-                              ),
+                                child: Text('Bank Transfer', style: TextStyle(
+                                    color: Color.fromARGB(255, 208, 224, 224), fontSize: 12, fontWeight: FontWeight.w600
+                                ),)),
                             ],
                           ),
                         )
@@ -196,13 +243,14 @@ class MyApp2 extends StatelessWidget {
             //ô 3
           Positioned(
             left: 30,
-            top: 425,
+            top: 465,
             child: Container(
-              width: 350,
+              width: 330,
               height: 135,
               decoration: BoxDecoration(
-                  border: Border.all(width: 3, color: Colors.blue),
-                  borderRadius: BorderRadius.all(Radius.circular(20))
+                color: Color.fromARGB(255, 231, 249, 253).withOpacity(0.4),
+                border: Border.all(width: 1, color: Colors.white38),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -212,16 +260,26 @@ class MyApp2 extends StatelessWidget {
                       height: 23,
                       margin: EdgeInsets.fromLTRB(20,15,20,15),
                       decoration: BoxDecoration(
-                        border: Border.all(width: 3, color: Colors.white),
-                      )),
+                        //border: Border.all(width: 3, color: Colors.white),
+                      ),
+                    child: Text('Choose Your Shipping Address',style: TextStyle(
+                      color: Colors.white, fontSize: 15, fontFamily: 'Visby Round',
+                      fontWeight: FontWeight.w700,
+                    ),),
+                  ),
                   Container(
                       width: 300,
                       height: 60,
+                      padding: EdgeInsets.only(left: 20,top: 10),
                       margin: EdgeInsets.fromLTRB(20,0,20,15),
                       decoration: BoxDecoration(
+                        color: Colors.white,
                           border: Border.all(width: 3, color: Colors.white),
                           borderRadius: BorderRadius.all(Radius.circular(20))
-                      )
+                      ),
+                      child: Text('Your address goes here', style: TextStyle(
+                          color: Color.fromARGB(255, 208, 224, 224), fontSize: 12, fontWeight: FontWeight.w600
+                      ),)
                   )
                 ],
               ),
@@ -258,9 +316,9 @@ class MyApp2 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(Icons.home,
-                      color: Colors.blueGrey, size: 35,),
-                    Icon(Icons.work, color: Colors.blueGrey, size: 35,),
-                    Icon(Icons.menu, color: Colors.blueGrey, size: 35,)
+                      color: Color.fromARGB(255, 211, 239, 251), size: 35,),
+                    Icon(Icons.work, color: Color.fromARGB(255, 211, 239, 251), size: 35,),
+                    Icon(Icons.menu, color: Color.fromARGB(255, 211, 239, 251), size: 35,)
                   ],
                 )
               ],
